@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>John Howell C. Carbonilla | IT Portfolio</title>
 
   <meta
     name="description"
-    content="Portfolio of John Howell C. Carbonilla, BS Information Technology graduate specializing in Network and Web Application."
-  />
+    content="John Howell C. Carbonilla — BS Information Technology graduate specializing in Network and Web Application."
+  >
 
-  <meta
-    name="keywords"
-    content="John Howell Carbonilla, Jhuaweil, IT Graduate, Web Developer, Software Developer, IT Support, Network and Web Application"
-  />
+  <meta name="author" content="John Howell C. Carbonilla">
 
-  <meta name="author" content="John Howell C. Carbonilla" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="John Howell C. Carbonilla | IT Portfolio" />
-  <meta
-    property="og:description"
-    content="BS Information Technology graduate specializing in Network and Web Application."
-  />
-  <meta property="og:type" content="website" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    /* =========================
-       RESET
-    ========================= */
+
+    :root {
+      --bg: #08090d;
+      --surface: #101218;
+      --surface-2: #151821;
+      --text: #f5f7fb;
+      --muted: #9da4b3;
+      --border: rgba(255,255,255,.09);
+      --accent: #8b6cff;
+      --accent-light: #b09cff;
+      --green: #66e3a3;
+      --max: 1180px;
+    }
 
     * {
       margin: 0;
@@ -38,60 +43,18 @@
       scroll-behavior: smooth;
     }
 
-    :root {
-      --bg: #0b0d12;
-      --bg-secondary: #11141b;
-      --card: rgba(255, 255, 255, 0.045);
-      --card-hover: rgba(255, 255, 255, 0.075);
-      --text: #f5f7fa;
-      --muted: #a8afbd;
-      --border: rgba(255, 255, 255, 0.09);
-      --accent: #7c5cff;
-      --accent-2: #a98cff;
-      --success: #67e8a5;
-      --max-width: 1180px;
-      --radius: 20px;
-    }
-
-    body.light {
-      --bg: #f5f7fb;
-      --bg-secondary: #ffffff;
-      --card: rgba(0, 0, 0, 0.035);
-      --card-hover: rgba(0, 0, 0, 0.06);
-      --text: #111827;
-      --muted: #5f6877;
-      --border: rgba(0, 0, 0, 0.08);
-      --accent: #6845ee;
-      --accent-2: #896ef5;
-      --success: #159a5a;
-    }
-
     html {
-      background: var(--bg);
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+      font-family: Inter, Arial, sans-serif;
       background:
-        radial-gradient(circle at 15% 20%, rgba(124, 92, 255, 0.12), transparent 25%),
-        radial-gradient(circle at 85% 10%, rgba(103, 232, 165, 0.06), transparent 20%),
+        radial-gradient(circle at 15% 10%, rgba(139,108,255,.12), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(102,227,163,.05), transparent 22%),
         var(--bg);
       color: var(--text);
       line-height: 1.6;
-      min-height: 100vh;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    body::selection {
-      background: var(--accent);
-      color: white;
     }
 
     a {
@@ -100,17 +63,13 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
-    }
-
-    button {
-      font: inherit;
+      max-width: 100%;
     }
 
     .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
+      width: min(92%, var(--max));
+      margin: auto;
     }
 
     /* =========================
@@ -120,21 +79,16 @@
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      z-index: 1000;
+      z-index: 999;
+
+      background: rgba(8,9,13,.72);
       backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      background: rgba(11, 13, 18, 0.72);
       border-bottom: 1px solid var(--border);
     }
 
-    body.light nav {
-      background: rgba(245, 247, 251, 0.78);
-    }
-
     .nav-inner {
-      height: 76px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -143,54 +97,27 @@
     .logo {
       font-size: 1.15rem;
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -.04em;
     }
 
     .logo span {
-      color: var(--accent-2);
+      color: var(--accent-light);
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 28px;
+      gap: 27px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: 0.92rem;
-      transition: color 0.2s ease;
+      font-size: .88rem;
+      transition: .2s;
     }
 
     .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .icon-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      cursor: pointer;
-      transition: 0.25s ease;
-    }
-
-    .icon-btn:hover {
-      background: var(--card-hover);
-      transform: translateY(-2px);
-    }
-
-    .menu-btn {
-      display: none;
+      color: white;
     }
 
     /* =========================
@@ -201,236 +128,210 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 130px 0 80px;
-      position: relative;
-      overflow: hidden;
+      padding: 120px 0 80px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 70px;
       align-items: center;
     }
 
-    .hero-badge {
+    .available {
       display: inline-flex;
       align-items: center;
       gap: 9px;
+
+      padding: 7px 12px;
+
       border: 1px solid var(--border);
-      background: var(--card);
-      padding: 8px 13px;
       border-radius: 999px;
+
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: .78rem;
+
+      background: rgba(255,255,255,.03);
+
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px rgba(102,227,163,.7);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      letter-spacing: -.065em;
+      line-height: .95;
+
       margin-bottom: 24px;
     }
 
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--success);
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(103, 232, 165, 0.7);
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 7vw, 5.9rem);
-      line-height: 0.96;
-      letter-spacing: -0.065em;
-      max-width: 780px;
-      margin-bottom: 25px;
-    }
-
-    .gradient-text {
+    .gradient {
       background: linear-gradient(
         120deg,
-        var(--text),
-        var(--accent-2),
-        var(--text)
+        white,
+        var(--accent-light)
       );
-      background-size: 200% auto;
+
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: gradientMove 7s linear infinite;
     }
 
-    @keyframes gradientMove {
-      to {
-        background-position: 200% center;
-      }
-    }
-
-    .hero-description {
-      font-size: 1.12rem;
+    .hero-text {
       color: var(--muted);
+      font-size: 1.08rem;
       max-width: 650px;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-      gap: 13px;
+      gap: 11px;
       flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      min-height: 50px;
-      padding: 0 21px;
-      border-radius: 12px;
+      padding: 13px 19px;
+      border-radius: 11px;
+      font-size: .85rem;
       font-weight: 700;
-      font-size: 0.92rem;
-      transition: 0.25s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
+
+      border: 1px solid var(--border);
+
+      transition: .25s;
     }
 
-    .btn-primary {
-      background: var(--text);
-      color: var(--bg);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      opacity: 0.92;
-    }
-
-    .btn-secondary {
-      border-color: var(--border);
-      background: var(--card);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: var(--card-hover);
+    .btn:hover {
       transform: translateY(-3px);
     }
 
-    /* HERO VISUAL */
+    .primary {
+      background: white;
+      color: black;
+    }
 
-    .hero-visual {
-      position: relative;
+    .secondary {
+      background: rgba(255,255,255,.04);
+    }
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile-area {
       display: flex;
       justify-content: center;
     }
 
     .profile-card {
       width: min(390px, 100%);
-      aspect-ratio: 0.92;
-      position: relative;
-      border-radius: 30px;
+
+      padding: 25px;
+
+      border-radius: 28px;
+
+      border: 1px solid var(--border);
+
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.08),
-          rgba(255,255,255,0.025)
+          rgba(255,255,255,.075),
+          rgba(255,255,255,.025)
         );
-      border: 1px solid var(--border);
-      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.35);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 24px;
+
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.35);
     }
 
-    .profile-glow {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: var(--accent);
-      filter: blur(90px);
-      opacity: 0.25;
-      position: absolute;
-      top: -80px;
-      right: -50px;
-    }
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1/1;
 
-    .profile-avatar {
-      width: 105px;
-      height: 105px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 22px;
+
+      object-fit: cover;
+
       background:
-        linear-gradient(145deg, var(--accent), #242235);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -0.05em;
-      box-shadow: 0 20px 50px rgba(124, 92, 255, 0.2);
-      position: relative;
-      z-index: 2;
+        linear-gradient(
+          145deg,
+          var(--accent),
+          #1b1d27
+        );
+
+      border: 1px solid var(--border);
+
+      margin-bottom: 22px;
     }
 
-    .profile-card-content {
-      position: relative;
-      z-index: 2;
+    .profile-name {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 4px;
     }
 
-    .profile-card-content h3 {
-      font-size: 1.55rem;
-      margin-bottom: 5px;
-    }
-
-    .profile-card-content p {
+    .profile-role {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .88rem;
     }
 
-    .profile-stack {
+    .profile-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
+      gap: 7px;
+      margin-top: 18px;
     }
 
-    .mini-tag {
-      font-size: 0.72rem;
-      color: var(--muted);
+    .tag {
       padding: 6px 9px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
       border-radius: 8px;
+
+      border: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: .7rem;
     }
 
     /* =========================
-       GENERAL SECTIONS
+       SECTION
     ========================= */
 
     section {
-      padding: 110px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 45px;
+      padding: 105px 0;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      color: var(--accent-2);
-      letter-spacing: 0.18em;
+      color: var(--accent-light);
+      font-size: .7rem;
       font-weight: 800;
-      font-size: 0.72rem;
+
+      letter-spacing: .18em;
+      text-transform: uppercase;
+
       margin-bottom: 10px;
     }
 
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-      margin-bottom: 12px;
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+
+      letter-spacing: -.045em;
+
+      line-height: 1;
+
+      margin-bottom: 14px;
     }
 
-    .section-heading p {
+    .section-description {
       color: var(--muted);
-      max-width: 650px;
+      max-width: 680px;
+      margin-bottom: 42px;
     }
 
     /* =========================
@@ -439,56 +340,51 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 20px;
     }
 
-    .glass-card {
+    .card {
+      background: rgba(255,255,255,.035);
       border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 30px;
+
+      border-radius: 20px;
+
+      padding: 28px;
     }
 
-    .glass-card:hover {
-      background: var(--card-hover);
-    }
-
-    .about-main p {
+    .about-text p {
       color: var(--muted);
       margin-bottom: 17px;
     }
 
-    .about-main p:last-child {
-      margin-bottom: 0;
-    }
-
-    .info-list {
+    .info {
       list-style: none;
-      display: grid;
-      gap: 18px;
     }
 
-    .info-item {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 15px;
-      padding-bottom: 17px;
+    .info li {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding: 14px 0;
+
       border-bottom: 1px solid var(--border);
+
+      font-size: .85rem;
     }
 
-    .info-item:last-child {
+    .info li:last-child {
       border-bottom: none;
-      padding-bottom: 0;
     }
 
     .info-label {
       color: var(--muted);
-      font-size: 0.85rem;
     }
 
     .info-value {
       font-weight: 650;
+      text-align: right;
     }
 
     /* =========================
@@ -498,165 +394,169 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+      gap: 14px;
     }
 
-    .skill-card {
-      padding: 23px;
+    .skill {
+      padding: 22px;
+
       border: 1px solid var(--border);
-      background: var(--card);
+
       border-radius: 16px;
-      min-height: 155px;
-      transition: 0.25s ease;
+
+      background: rgba(255,255,255,.03);
+
+      transition: .25s;
     }
 
-    .skill-card:hover {
+    .skill:hover {
       transform: translateY(-5px);
-      background: var(--card-hover);
+      background: rgba(255,255,255,.06);
     }
 
-    .skill-icon {
-      font-size: 1.35rem;
-      margin-bottom: 22px;
+    .skill h3 {
+      font-size: .95rem;
+      margin-bottom: 8px;
     }
 
-    .skill-card h3 {
-      font-size: 0.98rem;
-      margin-bottom: 5px;
-    }
-
-    .skill-card p {
+    .skill p {
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: .77rem;
     }
 
     /* =========================
        PROJECTS
     ========================= */
 
-    .projects-grid {
+    .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 20px;
     }
 
-    .project-card {
+    .project {
+      overflow: hidden;
+
       border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: 0.3s ease;
+
+      border-radius: 21px;
+
+      background: rgba(255,255,255,.035);
+
+      transition: .3s;
     }
 
-    .project-card:hover {
+    .project:hover {
       transform: translateY(-7px);
-      background: var(--card-hover);
     }
 
-    .project-image {
-      height: 245px;
-      position: relative;
-      overflow: hidden;
+    .project-top {
+      height: 225px;
+
+      padding: 24px;
+
       display: flex;
       align-items: flex-end;
-      padding: 24px;
+
       background:
-        radial-gradient(circle at 30% 20%, rgba(124,92,255,0.4), transparent 32%),
-        linear-gradient(135deg, #181622, #0e1016);
-      border-bottom: 1px solid var(--border);
+        radial-gradient(
+          circle at 30% 20%,
+          rgba(139,108,255,.35),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #181922,
+          #0e1015
+        );
     }
 
-    .project-number {
-      position: absolute;
-      top: 18px;
-      right: 20px;
-      font-size: 0.74rem;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 5px 9px;
-      background: rgba(0,0,0,0.15);
-    }
-
-    .project-preview {
+    .mockup {
       width: 100%;
-      height: 145px;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.055);
-      backdrop-filter: blur(12px);
+      height: 135px;
+
+      border: 1px solid rgba(255,255,255,.1);
+
+      border-radius: 14px;
+
       padding: 18px;
+
+      background: rgba(255,255,255,.045);
+
+      backdrop-filter: blur(10px);
     }
 
-    .preview-line {
+    .mock-line {
       height: 8px;
-      width: 65%;
+      width: 60%;
+
       border-radius: 20px;
-      background: rgba(255,255,255,0.18);
-      margin-bottom: 12px;
+
+      background: rgba(255,255,255,.14);
+
+      margin-bottom: 11px;
     }
 
-    .preview-line.short {
+    .mock-line.small {
       width: 35%;
     }
 
-    .preview-boxes {
+    .mock-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
+
       gap: 8px;
-      margin-top: 16px;
+
+      margin-top: 15px;
     }
 
-    .preview-box {
-      height: 50px;
+    .mock-box {
+      height: 47px;
+
       border-radius: 8px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.07);
+
+      background: rgba(255,255,255,.055);
     }
 
-    .project-body {
+    .project-content {
       padding: 27px;
     }
 
-    .project-body h3 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
+    .project-number {
+      color: var(--accent-light);
+      font-size: .7rem;
+      font-weight: 800;
+
+      letter-spacing: .15em;
+
+      margin-bottom: 7px;
     }
 
-    .project-body p {
+    .project-title {
+      font-size: 1.35rem;
+      margin-bottom: 9px;
+    }
+
+    .project-description {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .87rem;
       margin-bottom: 17px;
     }
 
-    .tags {
+    .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
       margin-bottom: 20px;
     }
 
-    .tag {
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.72rem;
-      padding: 5px 8px;
-      border-radius: 7px;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 16px;
-    }
-
-    .text-link {
-      font-size: 0.84rem;
+    .project-link {
+      font-size: .82rem;
       font-weight: 700;
-      color: var(--text);
     }
 
-    .text-link:hover {
-      color: var(--accent-2);
+    .project-link:hover {
+      color: var(--accent-light);
     }
 
     /* =========================
@@ -665,23 +565,28 @@
 
     .timeline {
       position: relative;
-      margin-top: 30px;
     }
 
     .timeline::before {
       content: "";
+
       position: absolute;
-      left: 14px;
-      top: 5px;
-      bottom: 5px;
+
+      left: 12px;
+      top: 0;
+      bottom: 0;
+
       width: 1px;
+
       background: var(--border);
     }
 
     .timeline-item {
       position: relative;
-      padding-left: 55px;
-      margin-bottom: 38px;
+
+      padding-left: 48px;
+
+      margin-bottom: 42px;
     }
 
     .timeline-item:last-child {
@@ -689,88 +594,104 @@
     }
 
     .timeline-dot {
-      width: 29px;
-      height: 29px;
       position: absolute;
+
       left: 0;
-      top: 0;
+      top: 2px;
+
+      width: 25px;
+      height: 25px;
+
       border-radius: 50%;
+
       background: var(--bg);
+
       border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
+
+      display: grid;
+      place-items: center;
     }
 
     .timeline-dot::after {
       content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+
+      width: 7px;
+      height: 7px;
+
       background: var(--accent);
+
+      border-radius: 50%;
     }
 
     .timeline-date {
-      font-size: 0.75rem;
-      color: var(--accent-2);
-      font-weight: 750;
-      margin-bottom: 6px;
+      color: var(--accent-light);
+
+      font-size: .75rem;
+
+      font-weight: 800;
+
+      margin-bottom: 5px;
     }
 
-    .timeline-item h3 {
-      font-size: 1.18rem;
+    .timeline-title {
+      font-size: 1.16rem;
       margin-bottom: 3px;
     }
 
     .timeline-company {
       color: var(--muted);
-      margin-bottom: 10px;
+
+      font-size: .86rem;
+
+      margin-bottom: 9px;
     }
 
-    .timeline-item p {
+    .timeline-description {
       color: var(--muted);
-      max-width: 750px;
+      font-size: .88rem;
+      max-width: 800px;
     }
 
     /* =========================
        CERTIFICATIONS
     ========================= */
 
-    .cert-grid {
+    .certifications {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 14px;
     }
 
-    .cert-card {
+    .cert {
+      padding: 22px;
+
       border: 1px solid var(--border);
+
+      background: rgba(255,255,255,.03);
+
       border-radius: 16px;
-      padding: 24px;
-      background: var(--card);
-      transition: 0.25s ease;
     }
 
-    .cert-card:hover {
-      transform: translateY(-4px);
-      background: var(--card-hover);
-    }
+    .cert-date {
+      color: var(--accent-light);
 
-    .cert-number {
-      color: var(--accent-2);
-      font-size: 0.72rem;
+      font-size: .68rem;
+
       font-weight: 800;
-      margin-bottom: 14px;
+
+      margin-bottom: 11px;
     }
 
-    .cert-card h3 {
-      font-size: 1rem;
+    .cert h3 {
+      font-size: .9rem;
       margin-bottom: 7px;
     }
 
-    .cert-card p {
+    .cert p {
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: .74rem;
     }
 
     /* =========================
@@ -779,81 +700,143 @@
 
     .education-card {
       display: grid;
-      grid-template-columns: 100px 1fr auto;
+
+      grid-template-columns: 85px 1fr auto;
+
       gap: 25px;
+
       align-items: center;
     }
 
-    .edu-mark {
-      width: 80px;
-      height: 80px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--card-hover);
+    .school-box {
+      width: 75px;
+      height: 75px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 18px;
+
       border: 1px solid var(--border);
+
+      background: rgba(255,255,255,.04);
+
       font-weight: 900;
-      color: var(--accent-2);
-      font-size: 1.2rem;
+
+      color: var(--accent-light);
     }
 
-    .education-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 4px;
+    .education h3 {
+      font-size: 1.15rem;
+      margin-bottom: 5px;
     }
 
-    .education-card p {
+    .education p {
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: .85rem;
     }
 
-    .edu-meta {
+    .education-meta {
       text-align: right;
     }
 
-    .edu-meta strong {
+    .education-meta strong {
       display: block;
-      font-size: 0.88rem;
     }
 
-    .edu-meta span {
+    .education-meta span {
       display: block;
+
       color: var(--muted);
-      font-size: 0.78rem;
-      margin-top: 4px;
+
+      font-size: .76rem;
+
+      margin-top: 5px;
+    }
+
+    /* =========================
+       ORGANIZATIONS / SEMINARS
+    ========================= */
+
+    .two-column {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+    }
+
+    .simple-list {
+      list-style: none;
+    }
+
+    .simple-list li {
+      padding: 16px 0;
+
+      border-bottom: 1px solid var(--border);
+
+      font-size: .85rem;
+    }
+
+    .simple-list li:last-child {
+      border-bottom: none;
+    }
+
+    .simple-list strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .simple-list span {
+      color: var(--muted);
+      font-size: .75rem;
     }
 
     /* =========================
        CONTACT
     ========================= */
 
-    .contact-box {
+    .contact {
       text-align: center;
-      padding: 75px 30px;
+
+      padding: 70px 25px;
+
+      border-radius: 27px;
+
       border: 1px solid var(--border);
-      border-radius: 28px;
+
       background:
-        radial-gradient(circle at 50% 20%, rgba(124,92,255,0.18), transparent 35%),
-        var(--card);
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(139,108,255,.19),
+          transparent 38%
+        ),
+        rgba(255,255,255,.03);
     }
 
-    .contact-box h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      letter-spacing: -0.045em;
+    .contact h2 {
+      font-size: clamp(2rem,4vw,3.3rem);
+
+      letter-spacing: -.05em;
+
       margin-bottom: 12px;
     }
 
-    .contact-box p {
+    .contact p {
       color: var(--muted);
-      max-width: 580px;
+
+      max-width: 600px;
+
       margin: 0 auto 28px;
     }
 
     .contact-links {
       display: flex;
+
       justify-content: center;
-      gap: 11px;
+
+      gap: 10px;
+
       flex-wrap: wrap;
     }
 
@@ -862,76 +845,64 @@
     ========================= */
 
     footer {
-      padding: 35px 0 45px;
+      padding: 32px 0 45px;
+
       border-top: 1px solid var(--border);
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
-      align-items: center;
+
       gap: 20px;
+
+      align-items: center;
     }
 
-    .footer-inner p {
+    footer p {
       color: var(--muted);
-      font-size: 0.78rem;
+
+      font-size: .76rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 18px;
+      gap: 17px;
     }
 
     .footer-links a {
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: .77rem;
     }
 
     .footer-links a:hover {
-      color: var(--text);
-    }
-
-    /* =========================
-       REVEAL ANIMATION
-    ========================= */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
+      color: white;
     }
 
     /* =========================
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 980px) {
+    @media (max-width: 950px) {
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 55px;
       }
 
       .hero-content {
         text-align: center;
       }
 
-      .hero-description {
-        margin-left: auto;
-        margin-right: auto;
+      .hero-text {
+        margin-inline: auto;
       }
 
-      .hero-buttons {
+      .buttons {
         justify-content: center;
       }
 
-      .hero-visual {
+      .profile-area {
         order: -1;
       }
 
@@ -940,50 +911,59 @@
       }
 
       .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
-      .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .certifications {
+        grid-template-columns: repeat(2,1fr);
       }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 750px) {
 
       .nav-links {
-        position: absolute;
-        top: 76px;
-        left: 0;
-        width: 100%;
-        padding: 20px 4%;
-        flex-direction: column;
-        align-items: flex-start;
-        background: var(--bg-secondary);
-        border-bottom: 1px solid var(--border);
         display: none;
       }
 
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-
       .about-grid,
-      .projects-grid {
+      .projects,
+      .two-column {
         grid-template-columns: 1fr;
       }
 
       .education-card {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 75px 1fr;
       }
 
-      .edu-meta {
+      .education-meta {
         grid-column: 2;
+        text-align: left;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      .skills-grid,
+      .certifications {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .info li {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .info-value {
         text-align: left;
       }
 
@@ -991,1178 +971,1230 @@
         flex-direction: column;
         text-align: center;
       }
+
     }
 
-    @media (max-width: 520px) {
-
-      section {
-        padding: 85px 0;
-      }
-
-      .hero {
-        padding-top: 115px;
-      }
-
-      .skills-grid,
-      .cert-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .info-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .glass-card {
-        padding: 23px;
-      }
-
-      .profile-card {
-        aspect-ratio: 0.95;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-buttons {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-  <nav>
-    <div class="container nav-inner">
+<nav>
 
-      <a href="#home" class="logo">
-        J<span>H</span>C.
-      </a>
+  <div class="container nav-inner">
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <a href="#home" class="logo">
+      J<span>H</span>C.
+    </a>
 
-      <div class="nav-actions">
+    <ul class="nav-links">
 
-        <button
-          class="icon-btn menu-btn"
-          id="menuBtn"
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
+      <li>
+        <a href="#about">About</a>
+      </li>
 
-        <button
-          class="icon-btn"
-          id="themeBtn"
-          aria-label="Toggle theme"
-          title="Toggle theme"
-        >
-          ☼
-        </button>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
 
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#experience">Experience</a>
+      </li>
+
+      <li>
+        <a href="#certifications">Certifications</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <div class="available">
+        <span class="dot"></span>
+        Open to IT Opportunities
       </div>
 
-    </div>
-  </nav>
+      <h1>
+        John Howell
+        <span class="gradient">
+          Carbonilla.
+        </span>
+      </h1>
+
+      <p class="hero-text">
+
+        Information Technology graduate majoring in
+        Network and Web Application with hands-on experience
+        in software development, database management,
+        technical support, cybersecurity, and digital projects.
 
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <main>
-
-    <section class="hero" id="home">
-
-      <div class="container hero-grid">
-
-        <div class="hero-content reveal">
-
-          <div class="hero-badge">
-            <span class="status-dot"></span>
-            BSIT Graduate • Class of 2026
-          </div>
-
-          <h1>
-            Hi, I'm
-            <span class="gradient-text">John Howell.</span>
-          </h1>
-
-          <p class="hero-description">
-            Information Technology graduate specializing in
-            Network and Web Application, with hands-on experience
-            in software development, technical support, databases,
-            and IT operations.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#projects" class="btn btn-primary">
-              View My Projects
-              →
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-              Let's Connect
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-visual reveal">
-
-          <div class="profile-card">
-
-            <div class="profile-glow"></div>
-
-            <div class="profile-avatar">
-              JHC
-            </div>
-
-            <div class="profile-card-content">
-
-              <h3>
-                John Howell C. Carbonilla
-              </h3>
-
-              <p>
-                Information Technology Graduate
-              </p>
-
-              <div class="profile-stack">
-
-                <span class="mini-tag">Java</span>
-                <span class="mini-tag">Web Development</span>
-                <span class="mini-tag">Android</span>
-                <span class="mini-tag">Databases</span>
-                <span class="mini-tag">Networking</span>
-                <span class="mini-tag">IT Support</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section id="about">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            About Me
-          </div>
-
-          <h2>
-            Turning technology into practical solutions.
-          </h2>
-
-          <p>
-            A quick introduction to my background, interests,
-            and technical journey.
-          </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-          <div class="glass-card about-main reveal">
-
-            <p>
-              I am a Bachelor of Science in Information Technology
-              graduate from Bataan Peninsula State University,
-              majoring in Network and Web Application.
-            </p>
-
-            <p>
-              Throughout my academic journey, I developed experience
-              in software development, Android application development,
-              database management, networking fundamentals, and
-              technical support.
-            </p>
-
-            <p>
-              I enjoy building useful digital solutions, learning new
-              technologies, solving technical problems, and continuously
-              improving my development skills.
-            </p>
-
-            <p>
-              I am currently looking for opportunities where I can
-              contribute my technical skills while gaining professional
-              experience and growing as an IT professional.
-            </p>
-
-          </div>
-
-
-          <div class="glass-card reveal">
-
-            <ul class="info-list">
-
-              <li class="info-item">
-                <span class="info-label">Location</span>
-                <span class="info-value">
-                  Bataan, Philippines
-                </span>
-              </li>
-
-              <li class="info-item">
-                <span class="info-label">Education</span>
-                <span class="info-value">
-                  BS Information Technology
-                </span>
-              </li>
-
-              <li class="info-item">
-                <span class="info-label">Major</span>
-                <span class="info-value">
-                  Network & Web Application
-                </span>
-              </li>
-
-              <li class="info-item">
-                <span class="info-label">University</span>
-                <span class="info-value">
-                  Bataan Peninsula State University
-                </span>
-              </li>
-
-              <li class="info-item">
-                <span class="info-label">GWA</span>
-                <span class="info-value">
-                  1.38
-                </span>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
-    <section id="skills">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            Technical Skills
-          </div>
-
-          <h2>
-            Tools I work with.
-          </h2>
-
-          <p>
-            Technologies and technical areas I've worked with
-            through academic projects and hands-on experience.
-          </p>
-
-        </div>
-
-
-        <div class="skills-grid">
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">⌘</div>
-            <h3>Java</h3>
-            <p>Application development and programming fundamentals.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">◈</div>
-            <h3>Web Development</h3>
-            <p>HTML, CSS and JavaScript for responsive interfaces.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">▣</div>
-            <h3>Android Development</h3>
-            <p>Android Studio, Java and XML-based application development.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">◉</div>
-            <h3>Databases</h3>
-            <p>MySQL, SQL, MongoDB Atlas and Firebase.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">⑂</div>
-            <h3>Git & GitHub</h3>
-            <p>Version control, repository management and collaboration.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">⌁</div>
-            <h3>Networking</h3>
-            <p>Network fundamentals, troubleshooting and device configuration.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">⚙</div>
-            <h3>Technical Support</h3>
-            <p>Computer, printer and basic IT troubleshooting.</p>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-icon">▤</div>
-            <h3>IT Operations</h3>
-            <p>Digital records, documentation and administrative support.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
-    <section id="projects">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            Selected Work
-          </div>
-
-          <h2>
-            Projects I've built.
-          </h2>
-
-          <p>
-            A selection of academic and technology projects
-            that showcase my problem-solving and development skills.
-          </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-          <!-- PROJECT 1 -->
-
-          <article class="project-card reveal">
-
-            <div class="project-image">
-
-              <span class="project-number">
-                01
-              </span>
-
-              <div class="project-preview">
-
-                <div class="preview-line"></div>
-                <div class="preview-line short"></div>
-
-                <div class="preview-boxes">
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="project-body">
-
-              <h3>
-                InnoBridge
-              </h3>
-
-              <p>
-                A startup concept designed to connect students
-                with real-world industry challenges and opportunities,
-                helping bridge the gap between academic learning
-                and industry experience.
-              </p>
-
-              <div class="tags">
-
-                <span class="tag">Mobile Application</span>
-                <span class="tag">Innovation</span>
-                <span class="tag">SDG 4</span>
-                <span class="tag">SDG 8</span>
-                <span class="tag">SDG 9</span>
-
-              </div>
-
-              <div class="project-links">
-
-                <!-- Replace # with your actual GitHub/project link -->
-                <a
-                  href="#"
-                  class="text-link"
-                  onclick="showMessage(event, 'Project link will be added soon.')"
-                >
-                  View Project →
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 2 -->
-
-          <article class="project-card reveal">
-
-            <div class="project-image">
-
-              <span class="project-number">
-                02
-              </span>
-
-              <div class="project-preview">
-
-                <div class="preview-line"></div>
-                <div class="preview-line short"></div>
-
-                <div class="preview-boxes">
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="project-body">
-
-              <h3>
-                Stronger Together
-              </h3>
-
-              <p>
-                A digital empowerment platform for solo parents,
-                featuring resources, job opportunities, community
-                interaction, financial tools, reminders and
-                assistance information.
-              </p>
-
-              <div class="tags">
-
-                <span class="tag">Web Application</span>
-                <span class="tag">AI</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Firebase</span>
-
-              </div>
-
-              <div class="project-links">
-
-                <a
-                  href="#"
-                  class="text-link"
-                  onclick="showMessage(event, 'Project link will be added soon.')"
-                >
-                  View Project →
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 3 -->
-
-          <article class="project-card reveal">
-
-            <div class="project-image">
-
-              <span class="project-number">
-                03
-              </span>
-
-              <div class="project-preview">
-
-                <div class="preview-line"></div>
-                <div class="preview-line short"></div>
-
-                <div class="preview-boxes">
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="project-body">
-
-              <h3>
-                Android Applications
-              </h3>
-
-              <p>
-                Academic Android applications developed using
-                Android Studio, Java and XML, with features including
-                search, categorized content, interactive interfaces
-                and database integration.
-              </p>
-
-              <div class="tags">
-
-                <span class="tag">Android Studio</span>
-                <span class="tag">Java</span>
-                <span class="tag">XML</span>
-                <span class="tag">Firebase</span>
-
-              </div>
-
-              <div class="project-links">
-
-                <a
-                  href="#"
-                  class="text-link"
-                  onclick="showMessage(event, 'Project link will be added soon.')"
-                >
-                  View Project →
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 4 -->
-
-          <article class="project-card reveal">
-
-            <div class="project-image">
-
-              <span class="project-number">
-                04
-              </span>
-
-              <div class="project-preview">
-
-                <div class="preview-line"></div>
-                <div class="preview-line short"></div>
-
-                <div class="preview-boxes">
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="project-body">
-
-              <h3>
-                Database & Web Projects
-              </h3>
-
-              <p>
-                Various academic projects involving web interfaces,
-                SQL databases, data management and backend fundamentals.
-              </p>
-
-              <div class="tags">
-
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">MySQL</span>
-
-              </div>
-
-              <div class="project-links">
-
-                <a
-                  href="https://github.com/Jhuaweil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-link"
-                >
-                  GitHub Profile →
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         EXPERIENCE
-    ========================= -->
-
-    <section id="experience">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            Experience
-          </div>
-
-          <h2>
-            Where I gained hands-on experience.
-          </h2>
-
-          <p>
-            Practical experience developed through internship
-            and project-based work.
-          </p>
-
-        </div>
-
-
-        <div class="glass-card reveal">
-
-          <div class="timeline">
-
-
-            <div class="timeline-item">
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-date">
-                OJT / Internship
-              </div>
-
-              <h3>
-                IT Technical Support & Administrative Assistant
-              </h3>
-
-              <div class="timeline-company">
-                PENELCO — Peninsula Electric Cooperative
-              </div>
-
-              <p>
-                Provided administrative and basic technical support,
-                including organizing documents, encoding forms,
-                managing digital records, troubleshooting printers
-                and computers, replacing printer toner, cleaning
-                scanner components, and assisting with workstation
-                setup.
-              </p>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-date">
-                Academic / Project Experience
-              </div>
-
-              <h3>
-                Software & Application Development
-              </h3>
-
-              <div class="timeline-company">
-                Bataan Peninsula State University
-              </div>
-
-              <p>
-                Developed academic applications and systems involving
-                Android development, web technologies, databases,
-                user interfaces and software project development.
-              </p>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CERTIFICATIONS
-    ========================= -->
-
-    <section id="certifications">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            Certifications
-          </div>
-
-          <h2>
-            Certifications & credentials.
-          </h2>
-
-          <p>
-            Professional certifications supporting my technical
-            and workplace skills.
-          </p>
-
-        </div>
-
-
-        <div class="cert-grid">
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 01
-            </div>
-
-            <h3>
-              Microsoft Office Specialist — Associate
-            </h3>
-
-            <p>
-              Microsoft Office productivity and workplace skills.
-            </p>
-
-          </div>
-
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 02
-            </div>
-
-            <h3>
-              IT Specialist — Network Security
-            </h3>
-
-            <p>
-              Foundational networking and security knowledge.
-            </p>
-
-          </div>
-
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 03
-            </div>
-
-            <h3>
-              IT Specialist — Device Configuration
-            </h3>
-
-            <p>
-              Device configuration and technical fundamentals.
-            </p>
-
-          </div>
-
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 04
-            </div>
-
-            <h3>
-              IT Specialist — Cybersecurity
-            </h3>
-
-            <p>
-              Foundational cybersecurity concepts and practices.
-            </p>
-
-          </div>
-
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 05
-            </div>
-
-            <h3>
-              PMI Project Management Ready
-            </h3>
-
-            <p>
-              Foundational project management knowledge.
-            </p>
-
-          </div>
-
-
-          <div class="cert-card reveal">
-
-            <div class="cert-number">
-              CERT 06
-            </div>
-
-            <h3>
-              IC3 GS6 Level 1
-            </h3>
-
-            <p>
-              Digital literacy and computing fundamentals.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
-
-    <section id="education">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="eyebrow">
-            Education
-          </div>
-
-          <h2>
-            Academic background.
-          </h2>
-
-        </div>
-
-
-        <div class="glass-card education-card reveal">
-
-          <div class="edu-mark">
-            BPSU
-          </div>
-
-          <div>
-
-            <h3>
-              Bachelor of Science in Information Technology
-            </h3>
-
-            <p>
-              Major in Network and Web Application
-            </p>
-
-            <p>
-              Bataan Peninsula State University
-            </p>
-
-          </div>
-
-          <div class="edu-meta">
-
-            <strong>
-              Class of 2026
-            </strong>
-
-            <span>
-              GWA: 1.38
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section id="contact">
-
-      <div class="container">
-
-        <div class="contact-box reveal">
-
-          <div class="eyebrow">
-            Get In Touch
-          </div>
-
-          <h2>
-            Let's build something useful.
-          </h2>
-
-          <p>
-            I'm open to opportunities in software development,
-            web development, IT support, networking and other
-            technology-related roles.
-          </p>
-
-          <div class="contact-links">
-
-            <a
-              href="mailto:jhccarbonilla@gmail.com"
-              class="btn btn-primary"
-            >
-              Email Me
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/jhccarbonilla"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="https://github.com/Jhuaweil"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <div class="container footer-inner">
-
-      <p>
-        © <span id="year"></span> John Howell C. Carbonilla. All rights reserved.
       </p>
 
-      <div class="footer-links">
+      <div class="buttons">
 
-        <a href="#home">Back to top ↑</a>
+        <a href="#projects" class="btn primary">
+          View My Projects →
+        </a>
 
-        <a
-          href="https://github.com/Jhuaweil"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
+        <a href="#contact" class="btn secondary">
+          Contact Me
         </a>
 
       </div>
 
     </div>
 
-  </footer>
+
+    <div class="profile-area">
+
+      <div class="profile-card">
+
+        <!--
+          PLACE YOUR PHOTO HERE:
+
+          Upload your photo to:
+          assets/profile.jpg
+
+          Then this image will automatically appear.
+        -->
+
+        <img
+          src="assets/profile.jpg"
+          alt="John Howell C. Carbonilla"
+          class="profile-photo"
+        >
+
+        <div class="profile-name">
+          John Howell C. Carbonilla
+        </div>
+
+        <div class="profile-role">
+          BS Information Technology
+          · Network & Web Application
+        </div>
+
+        <div class="profile-tags">
+
+          <span class="tag">Java</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Android</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Networking</span>
+          <span class="tag">Cybersecurity</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-  <script>
+<section id="about">
 
-    /* =========================
-       YEAR
-    ========================= */
+  <div class="container">
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    <div class="eyebrow">
+      About Me
+    </div>
 
+    <h2 class="section-title">
+      Building practical solutions with technology.
+    </h2>
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    <p class="section-description">
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+      A BSIT graduate with experience spanning software
+      development, mobile applications, databases,
+      technical support, networking, and cybersecurity.
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-
-      if (navLinks.classList.contains("active")) {
-        menuBtn.textContent = "✕";
-      } else {
-        menuBtn.textContent = "☰";
-      }
-    });
+    </p>
 
 
-    /* Close mobile menu after clicking */
+    <div class="about-grid">
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+      <div class="card about-text">
 
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.textContent = "☰";
-      });
+        <p>
 
-    });
+          I am a Bachelor of Science in Information Technology
+          graduate from Bataan Peninsula State University,
+          majoring in Network and Web Application.
 
+        </p>
 
-    /* =========================
-       THEME TOGGLE
-    ========================= */
+        <p>
 
-    const themeBtn = document.getElementById("themeBtn");
+          My academic and project experience includes
+          application development, database integration,
+          system testing, debugging, technical documentation,
+          project presentation, and IT troubleshooting.
 
-    const savedTheme = localStorage.getItem("portfolio-theme");
+        </p>
 
-    if (savedTheme === "light") {
-      document.body.classList.add("light");
-      themeBtn.textContent = "☾";
-    }
+        <p>
 
-    themeBtn.addEventListener("click", () => {
+          During my OJT at Peninsula Electric Cooperative,
+          I gained practical experience supporting computers,
+          printers, software, office equipment, document
+          processing, and digital records.
 
-      document.body.classList.toggle("light");
+        </p>
 
-      const isLight =
-        document.body.classList.contains("light");
+        <p>
 
-      localStorage.setItem(
-        "portfolio-theme",
-        isLight ? "light" : "dark"
-      );
+          I am currently seeking an entry-level IT or
+          technology role where I can apply my technical,
+          problem-solving, and project development skills
+          while continuing to grow professionally.
 
-      themeBtn.textContent =
-        isLight ? "☾" : "☼";
+        </p>
 
-    });
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-    const revealObserver =
-      new IntersectionObserver(
-        (entries) => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("show");
-
-              revealObserver.unobserve(
-                entry.target
-              );
-
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.12
-        }
-      );
+      </div>
 
 
-    revealElements.forEach(element => {
-      revealObserver.observe(element);
-    });
+      <div class="card">
+
+        <ul class="info">
+
+          <li>
+            <span class="info-label">Location</span>
+            <span class="info-value">Bagac, Bataan</span>
+          </li>
+
+          <li>
+            <span class="info-label">Degree</span>
+            <span class="info-value">BS Information Technology</span>
+          </li>
+
+          <li>
+            <span class="info-label">Major</span>
+            <span class="info-value">
+              Network & Web Application
+            </span>
+          </li>
+
+          <li>
+            <span class="info-label">University</span>
+            <span class="info-value">
+              BPSU
+            </span>
+          </li>
+
+          <li>
+            <span class="info-label">Graduation</span>
+            <span class="info-value">
+              Class of 2026
+            </span>
+          </li>
+
+          <li>
+            <span class="info-label">GWA</span>
+            <span class="info-value">
+              1.38
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-    /* =========================
-       PROJECT PLACEHOLDER MESSAGE
-    ========================= */
+<!-- =========================
+     SKILLS
+========================= -->
 
-    function showMessage(event, message) {
+<section id="skills">
 
-      event.preventDefault();
+  <div class="container">
 
-      alert(message);
+    <div class="eyebrow">
+      Technical Skills
+    </div>
 
-    }
+    <h2 class="section-title">
+      What I work with.
+    </h2>
 
-  </script>
+    <p class="section-description">
+
+      Technologies and technical areas developed through
+      academic projects, certifications, and hands-on experience.
+
+    </p>
+
+
+    <div class="skills-grid">
+
+      <div class="skill">
+
+        <h3>
+          Programming & Web
+        </h3>
+
+        <p>
+          Java, JavaScript, HTML, CSS, XML
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Application Development
+        </h3>
+
+        <p>
+          Android Studio, Mobile Application Development,
+          Front-End Development
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Software Testing
+        </h3>
+
+        <p>
+          System Testing, Debugging,
+          Troubleshooting
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Databases
+        </h3>
+
+        <p>
+          MySQL, SQL, MongoDB, Firebase
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Networking
+        </h3>
+
+        <p>
+          Network Troubleshooting,
+          Device Configuration,
+          Network Security
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Cybersecurity
+        </h3>
+
+        <p>
+          Cybersecurity Fundamentals,
+          Cyber Threat Management
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Technical Support
+        </h3>
+
+        <p>
+          Hardware/Software Troubleshooting,
+          Operating System Support
+        </p>
+
+      </div>
+
+
+      <div class="skill">
+
+        <h3>
+          Tools
+        </h3>
+
+        <p>
+          Git, GitHub, Microsoft 365,
+          Microsoft Office
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Selected Projects
+    </div>
+
+    <h2 class="section-title">
+      Work I've built.
+    </h2>
+
+    <p class="section-description">
+
+      Projects that demonstrate my experience in
+      application development, technology innovation,
+      system design, and presentation.
+
+    </p>
+
+
+    <div class="projects">
+
+
+      <!-- STRONGER TOGETHER -->
+
+      <article class="project">
+
+        <div class="project-top">
+
+          <div class="mockup">
+
+            <div class="mock-line"></div>
+            <div class="mock-line small"></div>
+
+            <div class="mock-grid">
+
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <div class="project-number">
+            PROJECT 01 · CAPSTONE
+          </div>
+
+          <h3 class="project-title">
+            Stronger Together
+          </h3>
+
+          <p class="project-description">
+
+            Digital Empowerment Hub for Solo Parents
+            with Artificial Intelligence. A digital platform
+            designed to provide solo parents with accessible
+            services, resources, employment opportunities,
+            community features, and support tools.
+
+          </p>
+
+
+          <div class="project-tags">
+
+            <span class="tag">
+              AI
+            </span>
+
+            <span class="tag">
+              Mobile Application
+            </span>
+
+            <span class="tag">
+              MySQL
+            </span>
+
+            <span class="tag">
+              SQL
+            </span>
+
+            <span class="tag">
+              System Testing
+            </span>
+
+          </div>
+
+
+          <div class="project-link">
+            Capstone Project · 2025–2026
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- SAFETYPULSE -->
+
+      <article class="project">
+
+        <div class="project-top">
+
+          <div class="mockup">
+
+            <div class="mock-line"></div>
+            <div class="mock-line small"></div>
+
+            <div class="mock-grid">
+
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <div class="project-number">
+            PROJECT 02 · REGIONAL COMPETITION
+          </div>
+
+          <h3 class="project-title">
+            SafetyPulse
+          </h3>
+
+          <p class="project-description">
+
+            An accident detection and emergency alert
+            solution utilizing sensor-based technologies.
+            Conceptualized the solution, developed
+            presentation materials, and presented the
+            project before evaluators.
+
+          </p>
+
+
+          <div class="project-tags">
+
+            <span class="tag">
+              IoT Concept
+            </span>
+
+            <span class="tag">
+              Sensors
+            </span>
+
+            <span class="tag">
+              Emergency Alert
+            </span>
+
+            <span class="tag">
+              Presentation
+            </span>
+
+          </div>
+
+
+          <div class="project-link">
+            🏆 Best Presenter Award · 2024
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Experience
+    </div>
+
+    <h2 class="section-title">
+      Hands-on experience.
+    </h2>
+
+    <p class="section-description">
+
+      Practical experience gained through OJT and
+      academic project development.
+
+    </p>
+
+
+    <div class="card">
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-date">
+            JANUARY 2026 – APRIL 2026
+          </div>
+
+          <h3 class="timeline-title">
+            IT Technical Support & Administrative Assistant
+          </h3>
+
+          <div class="timeline-company">
+            Peninsula Electric Cooperative, Inc. (PENELCO)
+          </div>
+
+          <p class="timeline-description">
+
+            Provided technical support for computers,
+            printers, software, and office equipment.
+            Installed and configured computer hardware
+            and software, performed basic troubleshooting
+            and maintenance, encoded and organized records,
+            and assisted personnel with technical concerns,
+            document processing, and administrative tasks.
+
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-date">
+            2022 – 2026
+          </div>
+
+          <h3 class="timeline-title">
+            Academic Software & Application Development
+          </h3>
+
+          <div class="timeline-company">
+            Bataan Peninsula State University
+          </div>
+
+          <p class="timeline-description">
+
+            Developed academic software and mobile applications,
+            worked with databases, conducted system testing,
+            prepared technical documentation, collaborated
+            on development projects, and presented technology
+            solutions to evaluators.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certifications">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Certifications
+    </div>
+
+    <h2 class="section-title">
+      Credentials & certifications.
+    </h2>
+
+    <p class="section-description">
+
+      Professional and technical certifications supporting
+      my IT, cybersecurity, networking, software, and
+      workplace skills.
+
+    </p>
+
+
+    <div class="certifications">
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          SEPTEMBER 2026
+        </div>
+
+        <h3>
+          Cybersecurity Defense Analyst
+        </h3>
+
+        <p>
+          Cybersecurity
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          AUGUST 2026
+        </div>
+
+        <h3>
+          Introduction to Bookkeeping
+        </h3>
+
+        <p>
+          Professional Development
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          JUNE 2026
+        </div>
+
+        <h3>
+          Operating System Support
+        </h3>
+
+        <p>
+          IT Support
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          APRIL 2026
+        </div>
+
+        <h3>
+          Software Development
+        </h3>
+
+        <p>
+          Software Development
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          NOVEMBER 2025
+        </div>
+
+        <h3>
+          Microsoft Office Specialist – Associate
+        </h3>
+
+        <p>
+          Microsoft 365 Apps
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          MAY 2025
+        </div>
+
+        <h3>
+          IT Specialist — Network Security
+        </h3>
+
+        <p>
+          Network Security
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          APRIL 2025
+        </div>
+
+        <h3>
+          IT Specialist — Device Configuration & Management
+        </h3>
+
+        <p>
+          Device Configuration
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          DECEMBER 2024
+        </div>
+
+        <h3>
+          IT Specialist — Cybersecurity
+        </h3>
+
+        <p>
+          Cybersecurity
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          DECEMBER 2024
+        </div>
+
+        <h3>
+          PMI Project Management Ready®
+        </h3>
+
+        <p>
+          Project Management
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          OCTOBER 2024
+        </div>
+
+        <h3>
+          Cyber Threat Management
+        </h3>
+
+        <p>
+          Cybersecurity
+        </p>
+
+      </div>
+
+
+      <div class="cert">
+
+        <div class="cert-date">
+          MAY 2024
+        </div>
+
+        <h3>
+          IC3 GS6 Level 1
+        </h3>
+
+        <p>
+          Digital Literacy
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Education
+    </div>
+
+    <h2 class="section-title">
+      Academic background.
+    </h2>
+
+    <p class="section-description">
+      My academic foundation in information technology.
+    </p>
+
+
+    <div class="card education-card">
+
+      <div class="school-box">
+        BPSU
+      </div>
+
+
+      <div class="education">
+
+        <h3>
+          Bachelor of Science in Information Technology
+        </h3>
+
+        <p>
+          Major in Network and Web Application
+        </p>
+
+        <p>
+          Bataan Peninsula State University
+        </p>
+
+        <p>
+          Dean’s Lister Awardee
+        </p>
+
+      </div>
+
+
+      <div class="education-meta">
+
+        <strong>
+          2022 – 2026
+        </strong>
+
+        <span>
+          GWA: 1.38
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ORGANIZATIONS + SEMINARS
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="two-column">
+
+
+      <div class="card">
+
+        <div class="eyebrow">
+          Organizations
+        </div>
+
+        <h2 class="section-title">
+          Involvement.
+        </h2>
+
+
+        <ul class="simple-list">
+
+          <li>
+
+            <strong>
+              Student Society on Information Technology Education
+              (SSITE)
+            </strong>
+
+            <span>
+              Active Member · 2026
+            </span>
+
+          </li>
+
+
+          <li>
+
+            <strong>
+              BPSU SIKAT Technology Business Incubator (TBI)
+            </strong>
+
+            <span>
+              Incubee · 2026
+            </span>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="eyebrow">
+          Seminars
+        </div>
+
+        <h2 class="section-title">
+          Continuous learning.
+        </h2>
+
+
+        <ul class="simple-list">
+
+          <li>
+
+            <strong>
+              AI for IA: Uniting-Academia through Artificial Intelligence
+            </strong>
+
+            <span>
+              October 2025
+            </span>
+
+          </li>
+
+
+          <li>
+
+            <strong>
+              Bataan Startup Day
+            </strong>
+
+            <span>
+              November 2024
+            </span>
+
+          </li>
+
+
+          <li>
+
+            <strong>
+              IRCITE: Catching the Waves of Technological Advances
+              through IT Research and Breakthrough Innovations
+            </strong>
+
+            <span>
+              May 2023
+            </span>
+
+          </li>
+
+
+          <li>
+
+            <strong>
+              RAITE: NGL IT FTW IYKWIM — Decoding and Security FR
+            </strong>
+
+            <span>
+              October 2022
+            </span>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact">
+
+      <div class="eyebrow">
+        Get In Touch
+      </div>
+
+      <h2>
+        Let's connect.
+      </h2>
+
+      <p>
+
+        I am open to entry-level opportunities in software
+        development, web development, IT support, networking,
+        cybersecurity, and other technology-related roles.
+
+      </p>
+
+
+      <div class="contact-links">
+
+        <a
+          href="mailto:jhccarbonilla@gmail.com"
+          class="btn primary"
+        >
+          Email Me
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/jhccarbonilla"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn secondary"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          href="https://github.com/Jhuaweil"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn secondary"
+        >
+          GitHub
+        </a>
+
+
+        <a
+          href="tel:+639686621348"
+          class="btn secondary"
+        >
+          Call Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <p>
+      © 2026 John Howell C. Carbonilla
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#home">
+        Back to top ↑
+      </a>
+
+      <a
+        href="https://github.com/Jhuaweil"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
